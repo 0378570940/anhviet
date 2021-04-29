@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="input" id="nhapten">
+    <select name="" id="slgoi" class="select">
+        <option value="deno">deno</option>
+        <option value="hour">hour</option>
+        <option value="arr">arr</option>
+    </select>
+    <button onclick="nhap()">ok</button>
+    <br>
+    <br>
+    <table style="border: 1px solid black;margin:10px;padding:10px;">
+        <tr>
+            <th>ten</th>
+            <th>sothich</th>
+            <th>thoigian</th>
+        </tr>
+        <tr>
+            <td id="tblten"></td>
+            <td id="tblsothich"> </td>
+            <td id="tblthoigian"></td>
+        </tr>
+    </table>
+    <script>
+        function nhap() {
+            var name = document.getElementById('nhapten').value;
+            var tblhienthi = "<tr><td>" + name + "</td></tr>";
+            document.getElementById('tblten').innerHTML = tblhienthi;
+            var tblname = document.getElementById('slgoi').value;
+            var tblsothich = "<tr><td>" + tblname + "</td></tr>";
+            document.getElementById('tblsothich').innerHTML = tblsothich;
+            // var today = new Date();
+            // var date = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+            // document.getElementById('tblthoigian').innerHTML = date;
+        }
+        debugger;
+        var myVar = setInterval(myTimer, 1000);
+
+        function myTimer() {
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("tblthoigian").innerHTML = t;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day8.css">
+    <link rel="stylesheet" href="hocjs.js">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="row g-2">
+                <div class="col-md">
+                    <p id="menu">DOTO</p>
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInputGrid" placeholder="if" >
+                    <label for="floatingInputGrid"></label>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                      <option selected> done</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                   
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="menu">
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            them moi
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+            cap nhat
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+            xoa
+          </button>
+    </div>
+    <script>
+      document.getElementById("menu").innerHTML="nhấn vào đây viết được nhiều hơn"
+    </script>
+</body>
+</html>

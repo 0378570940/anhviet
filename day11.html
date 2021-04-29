@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <!-- onkeydown nhan suong xe an -->
+    <input type="text" id="ouput" onkeydown="sum()">
+    <script>
+        // function nhapchu() {
+        //     var result = taochu(document.getElementById("ouput").value);
+        //     document.getElementById("demo").innerHTML = result;
+        // }
+
+        // function taochu(message) {
+        //     // var newMessage = '"' + message + '"';
+        //     var newMessage = message;
+        //     return newMessage;
+        // }
+
+
+        function sum() {
+            var result = taomang(document.getElementById("ouput").value);
+            document.getElementById("demo").innerHTML = result;
+        }
+
+        function find() {
+            var result = taomang(document.getElementById("ouput").value);
+            document.getElementById("demo").innerHTML = result;
+        }
+
+        function taomang() {
+            var index = 0;
+            var end = 10;
+            var array = [];
+            for (index; index <= +end; index++) {
+                // mang ngược end - index
+                array.push(end - index);
+            }
+            return array;
+        }
+    </script>
+</body>
+
+</html>

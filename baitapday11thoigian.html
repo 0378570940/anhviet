@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="fname">nhapho</label>
+    <input type="text" id="demo1">
+    <label for="fname">nhapten</label>
+    <input type="text" id="demo2">
+    <label for="fname">thoigian</label>
+    <input type="text" id="demo3">
+    <table id="tbnhap">
+
+    </table>
+    <button onclick="them()">thêm</button>
+    <button onclick="nhap()">nhập</button>
+    <button onclick="xoa()">xóa</button>
+    <script>
+        function chuyenmau() {
+            setInterval(function() {
+                doimau();
+            }, 2000);
+        }
+
+        function doimau() {
+            var mau = document.getElementById('doimau');
+            var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            mau.style.color = "#" + randomColor;
+        }
+        var name = "<tr><th>fNane</tr></th><tr><th>lNane</tr></th> "
+        document.getElementById("tbnhap").innerHTML = name;
+        //hien thi ten
+        function them() {
+            var first = document.getElementById("demo1").value;
+            var last = document.getElementById("demo2").value;
+            var table = "<tr id='doimau'><td >" + first + "</td> <td>" + last + "</td></tr>";
+            document.getElementById("tbnhap").innerHTML = table;
+            chuyenmau();
+        }
+    </script>
+
+    <!-- <input type="text" class="input">
+    <select name="" id="">
+        <option value="deno">deno</option>
+        <option value="hour">deno</option>
+        <option value="arr">arr</option>
+    </select> -->
+</body>
+<!-- https://niithanoi.edu.vn/du-an-javascript-cho-nguoi-moi-hoc.html -->
+
+</html>

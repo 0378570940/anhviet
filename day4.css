@@ -1,0 +1,26 @@
+.main{
+    background: red;
+    max-width: 960px;
+    height: 300px;
+    margin: 0px auto;
+    padding: 5px;
+}
+.item{
+    background: black;
+    margin: 10px;
+    color: white;
+    flex:1;
+    height: 90px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.top{
+    justify-content: center; 
+}
+/* .item2{
+    align-self: flex-end;
+} */

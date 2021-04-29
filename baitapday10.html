@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="demo1">
+    <input type="text" id="demo2">
+    <input type="text" id="demo3">
+    <div>
+        <button onclick="sum()">sum</button>
+        <button onclick="find()">find</button>
+        <button onclick="reverse()">reverse</button>
+        <button onclick="swap()">swap</button>
+        <button onclick="showall()">hienthilen</button>
+        <button onclick="xoa()">xoa</button>
+        <div id="fsum"></div>
+        <div id="freverse"></div>
+        <div id="fswap"></div>
+        <select name="" id="name1" style="width:50px">ngay</select>
+        <select name="" id="name2" style="width:50px">thang</select>
+        <select name="" id="name3" style="width:60px">nam</select>
+    </div>
+    <script>
+        var options = "";
+        for (var i = 1; i <= 30; i++) {
+            ngay += "<options>" + i + "</options>"
+        }
+        document.getElementById("name1").innerHTML = ngay;
+        var options = "";
+        for (var i = 1; i <= 30; i++) {
+            thang += "<options>" + i + "</options>"
+        }
+        document.getElementById("name2").innerHTML = thang;
+        var options = "";
+        for (var i = 1800; i <= 2021; i++) {
+            options += "<option>" + i + "</opation>"
+        }
+        document.getElementById("name3").innerHTML = options;
+
+
+        function sum() {
+            var name = 0;
+            var n = document.getElementById("demo1").value;
+            for (i = 0; i <= n; i++) {
+                name += i;
+            }
+            document.getElementById("fsum").innerHTML = name;
+        }
+        var nhap1 = document.getElementById("demo1");
+        var nhap2 = document.getElementById("demo2");
+        var nhap3 = document.getElementById("demo3");
+
+        function reverse() {
+            var arr = [];
+            arr.push(nhap1.value, nhap2.value, nhap3.value);
+            arr.sort(function(a, b) {
+                return a - b;
+            })
+            document.getElementById("freverse").innerHTML = arr;
+        }
+
+        function swap() {
+            var arr = [];
+            arr.push(nhap1.value, nhap2.value, nhap2.value);
+            arr.sort(function(a, b) {
+                return b - a;
+            })
+            document.getElementById("fswap").innerHTML = arr;
+        }
+
+        function showall() {
+            console.log('hienthilen');
+            sum();
+            reverse();
+            swap();
+        }
+
+        function xoa() {
+            document.getElementById("fsum").innerHTML = "";
+            document.getElementById("freverse").innerHTML = "";
+            document.getElementById("fswap").innerHTML = "";
+            nhap1.value = "";
+            nhap2.value = "";
+            nhap3.value = "";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        margin: 10px 150px 0px 10px;
+    }
+    
+    button {
+        margin: 10px 10px 0px 10px;
+        width: 60px;
+    }
+</style>
+
+<body>
+
+    <input type="text" id="dome1" placeholder="num1">
+    <input type="text" id="dome2" placeholder="num2">
+    <input type="text" id="dome3" placeholder="num3">
+    <p id="demo1"></p>
+    <div id="">
+        <button type="button" onclick="sum()">sum</button>
+        <button type="button" onclick="find()">tìmkiếm</button>
+        <button type="button" onclick="reverse()">reverse</button>
+        <button type="button" onclick="swap()">swap</button>
+        <button type="button" onclick="showall()">all</button>
+        <button type="button" onclick="xoa()">clear</button>
+        <div id="content"></div>
+        <div id="sapxep"></div>
+        <div id="sxnguoclai"></div>
+        <h2 id="timso4"></h2>
+
+    </div>
+    <script>
+        function sum() {
+            var count = 0;
+            var n = document.getElementById("dome1").value;
+            for (i = 0; i <= n; i++) {
+                count += i;
+            }
+            document.getElementById("content").innerHTML = name;
+        }
+
+        function find() {
+            var arr = [];
+            var count = 0;
+            arr.push(num1.value, num2.value, num3.value);
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == 4) {
+                    count += 1;
+                }
+            }
+            if (count > 0) {
+                document.getElementById("timso4").innerHTML = 'Có số 4';
+            } else {
+                document.getElementById("timso4").innerHTML = 'Không có số 4';
+            }
+        }
+        var num1 = document.getElementById('dome1');
+        var num2 = document.getElementById('dome2');
+        var num3 = document.getElementById('dome3');
+
+        function reverse() {
+            var arr = [];
+            arr.push(num1.value, num2.value, num3.value);
+            //sapxep mang theo thu tu tang dan
+            arr.sort(function(a, b) {
+                return a - b;
+            })
+            document.getElementById("sapxep").innerHTML = arr;
+        }
+
+        function swap() {
+            var arr = [];
+            arr.push(num1.value, num2.value, num3.value);
+            //sapxep mang theo thu tu giam dan
+            arr.sort(function(a, b) {
+                return b - a;
+            })
+            document.getElementById("sxnguoclai").innerHTML = arr;
+        }
+
+        function xoa() {
+            document.getElementById("sapxep").innerHTML = '';
+            document.getElementById("sxnguoclai").innerHTML = '';
+            document.getElementById("content").innerHTML = '';
+            document.getElementById("timso4").innerHTML = '';
+            num1.value = '';
+            num2.value = '';
+            num3.value = '';
+        }
+
+        function showall() {
+            console.log('all');
+            sum();
+            reverse();
+            swap();
+            find()
+        }
+        // function them1(number) {
+        //     var name = [];
+        //     for (i = 0; i <= number; i++) {
+        //         name.push(1);
+        //     }
+        //     return name;
+        // }
+    </script>
+</body>
+
+</html>

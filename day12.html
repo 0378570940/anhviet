@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <style class="style">
+        .demo1 {
+            background: darkcyan;
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+            float: left;
+        }
+        
+        .demo2 {
+            background: darkslategray;
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+            float: left;
+        }
+        
+        .demo3 {
+            background: darkslategrey;
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+            float: left;
+        }
+    </style>
+    <div class="demo1">chodien</div>
+    <div class="demo2">meo</div>
+    <div class="demo3">meo</div>
+    <table>
+        <tr>
+            <td>win</td>
+            <td>streak</td>
+        </tr>
+    </table> -->
+    <style>
+        table {
+            border: 1;
+        }
+    </style>
+    <table>
+        <tr id="demo">
+            <!-- <th id="demo">giờ</th>
+            <th>thang</th>
+            <th>nam</th>
+            <th>ngày</th> -->
+        </tr>
+    </table>
+    <button onclick="them()">ok</button>
+
+    <script>
+        function them() {
+            var today = new Date();
+            var date = today.getHours() + '-' + today.getMinutes() + '-' + today.getSeconds() + '-----' + today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+            document.getElementById("demo").innerHTML = date;
+        }
+    </script>
+</body>
+
+</html>

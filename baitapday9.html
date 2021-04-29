@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="mins">
+    <input id="mins1">
+    <button onclick="btnthem()">Hiển thị Họ và Tên</button>
+    <table id="mySelect">
+    </table>
+    <script>
+        var tf_name = [];
+        var name = "<tr><th>fNane</tr></th><tr><th>lNane</tr></th> "
+        document.getElementById("mySelect").innerHTML = name;
+        //hien thi ten
+        function btnthem() {
+            var first = document.getElementById("mins").value;
+            var last = document.getElementById("mins1").value;
+            var table = "<tr><td>" + first + "</td> <td>" + last + "</td></tr>";
+            document.getElementById("mySelect").innerHTML = table;
+        }
+    </script>
+</body>
+
+</html>

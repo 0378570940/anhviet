@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="gio"></div>
+    <input type="text" id="name">
+    <select id="chon">
+        <option value="soccer">soccer</option>
+        <option value="swimming">swimming</option>
+        <option value="sleep">sleep</option>
+    </select>
+    <button onclick="nhap()">ok</button>
+    <table id="them">
+        <tbody>
+            <tr>
+                <th>
+                    <tr>
+                        <td><b>nhapten</b></td>
+                    </tr>
+                    <tr>
+                        <td id="nhapten"></td>
+                    </tr>
+                </th>
+                <th>
+                    <tr>
+                        <td>sothich</td>
+                    </tr>
+                    <tr>
+                        <td id="sothich"></td>
+                    </tr>
+                </th>
+                <th>
+                    <tr>
+                        <td>deadline</td>
+                    </tr>
+                    <tr>
+                        <td id="thoigian"></td>
+                    </tr>
+                </th>
+                <th>
+                    <tr>
+                        <td>congviec</td>
+                    </tr>
+                    <tr>
+                        <td id="congviec"></td>
+                    </tr>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var myVar = setInterval(myTimer, 1000);
+
+        var x = function myTimer() {
+            var today = new Date();
+            var date = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+            document.getElementById("gio").innerHTML = date;
+        }
+
+        function nhap() {
+            var first = document.getElementById('name').value;
+            document.getElementById('nhapten').innerHTML = first;
+            //them so thich
+            var last = document.getElementById('chon').value;
+            document.getElementById('sothich').innerHTML = last;
+
+            var today = new Date();
+            today.getSeconds() < 10 ? `${'0' + today.getSeconds()}` : today.getSeconds();
+            var deadline = today.getHours() + ':' + `${today.getMinutes() + 1}` + ':' + today.getSeconds();
+            document.getElementById('thoigian').innerHTML = deadline;
+
+            if (date == deadline) {
+                alert("ádas");
+            }
+            console.log(date);
+            console.log(deadline);
+
+        }
+    </script>
+</body>
+
+</html>

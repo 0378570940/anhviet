@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    select {
+        width: 60px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- hien thi ngày tháng năm  -->
+    <select name="" id="name"></select>
+    <script>
+        var options = "";
+        for (var i = 1800; i <= 2021; i++) {
+            options += "<option>" + i + "</opation>"
+        }
+        document.getElementById("name").innerHTML = options;
+    </script>
+</body>
+
+</html>
